@@ -3,7 +3,11 @@ import 'package:todoey/models/task.dart';
 import 'dart:collection';
 
 class TaskData extends ChangeNotifier {
-  List<Task> _tasks = [Task(name: 'Teste')];
+  List<Task> _tasks = [
+    Task(name: 'Add as many tasks as you want'),
+    Task(name: 'Check the tasks you completed', isDone: true),
+    Task(name: 'Hold to delete a task')
+  ];
 
   UnmodifiableListView<Task>? get tasks {
     return UnmodifiableListView(_tasks);
